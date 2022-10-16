@@ -26,29 +26,51 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
-
-
-
-Write the detailed procedure here 
-
-
+~~~
+1.Use module projname(input,output) to start the Verilog programmming.
+2.Assign inputs and outputs using the word input and output respectively.
+3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression.
+4.Use each output to represnt onre for differnce and the other for borrow.
+5.End the verilog program using keyword endmodule.
+~~~
 ## Program:
-/*
+~~~
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by: Ranjith D
+RegisterNumber: 212221240044
+~~~
+### Half subractor:
+~~~
+module half_sub(output B,D, input x,y);
+assign D=x^y;
+assign B=~x&y;
+endmodule
+~~~
+### Full subractor:
+~~~
+module full_sub(output B,D, input x,y,z);
+assign D=x^y^z;
+assign B=(~x&(y^z))|(y&z);
+endmodule
+~~~
 
 ## Output:
 
-## Truthtable
-
-
-
+## Logic symbol & Truthtable
+### Half subractor truthtable:
+![](https://github.com/abdulwasih2003/Experiment--03-Half-Subtractor-and-Full-subtractor/blob/main/1.png)
+### Full subractor truthtable:
+![](https://github.com/abdulwasih2003/Experiment--03-Half-Subtractor-and-Full-subtractor/blob/main/2.png)
 ##  RTL realization
-
-
+### Half subractor:
+![](https://github.com/abdulwasih2003/Experiment--03-Half-Subtractor-and-Full-subtractor/blob/main/3.png)
+### Full subractor:
+![](https://github.com/abdulwasih2003/Experiment--03-Half-Subtractor-and-Full-subtractor/blob/main/4.png)
 ## Timing diagram 
+### Half subractor:
+![](https://github.com/abdulwasih2003/Experiment--03-Half-Subtractor-and-Full-subtractor/blob/main/5.png)
+### Full subractor:
+![](https://github.com/abdulwasih2003/Experiment--03-Half-Subtractor-and-Full-subtractor/blob/main/6.png)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
